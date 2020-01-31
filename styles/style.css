@@ -1,21 +1,30 @@
 *{
   box-sizing: border-box;
   font-family: Arial;
+  color: #5F6368;
 }
 
 html, body {
+	height: 100%;
+}
+
+html, body, p, a, ul, li {
 	margin: 0;
 	padding: 0;
 }
 
+#wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+}
+
 header {
-	position: absolute;
-	right: 0; top: 0;
 	padding: 20px;
 }
 
 ul {
-	margin: 0; padding: 0;
 	list-style: none;
 	font-size: 13px;
 }
@@ -23,19 +32,20 @@ ul {
 #main-menu {
 	display: flex;
 	width: 100%;
+	justify-content: flex-end;
 	align-items: center;
 }
 
 #main-menu li {
-		padding-left: 10px;
+	padding-left: 10px;
 }
 
-#main-menu a {
+#main-menu li a {
 	text-decoration: none;
 	color: black;
 }
 
-#main-menu a:hover {
+#main-menu li a:hover {
 	text-decoration: underline;
 }
 
@@ -115,26 +125,43 @@ form {
 	margin: 11px 4px;
 	line-height: 27px;
 	height: 36px;
-	color: #5F6368;
 	border-radius: 4px;
 }
 
-.submit-search:hover {
+input[type="submit"]:hover {
 	border: 1px solid gray;
 	cursor: pointer;
 }
 
 footer {
-	position: fixed;
-	bottom: 0;
-	padding: 15px 30px;
+	background-color: #f4f4f4;
+	width: 100%;
 }
 
-footer ul {
+footer section {
+	border-top: 1px solid #e4e4e4;
+	padding: 10px 30px;
+}
+
+footer a {
+	text-decoration: none;
+}
+
+footer a:hover {
+	text-decoration: underline;
+}
+
+#footer-menu {
+	display: flex;
+	justify-content: space-between;
+}
+
+#footer-menu ul {
 	list-style: none;
 	display: inline-block;
 }
 
-footer ul li {
+#footer-menu ul li {
 	display: inline-block;
+	padding-right: 20px;
 }
